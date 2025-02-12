@@ -21,7 +21,7 @@ class LinkedList:
         self.length += 1
         return True
 
-    def loop(self):
+    def has_loop(self):
         slow = self.head
         fast = self.head
 
@@ -40,10 +40,10 @@ my_linked_list_1.append(2)
 my_linked_list_1.append(3)
 my_linked_list_1.append(4)
 my_linked_list_1.tail.next = my_linked_list_1.head
-print(my_linked_list_1.loop())
+print(my_linked_list_1.has_loop())
 
 my_linked_list_2 = LinkedList(1)
 my_linked_list_2.append(2)
 my_linked_list_2.append(3)
 my_linked_list_2.append(4)
-print(my_linked_list_2.loop())
+print(my_linked_list_2.has_loop())
